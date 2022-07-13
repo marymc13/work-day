@@ -1,6 +1,7 @@
 tasks = [];
-var addButtonEl = document.querySelector("#add-task");
+var addButtonEl = document.querySelector("#input");
 let input;
+var hours = [9,10,11,12,1,2,3,4,5];
 //Add current date to the top of the page using momentjs
 const date = document.getElementById("date")
 const m = moment()
@@ -10,31 +11,19 @@ const eDate = document.getElementById('date');
  eDate.innerHTML = NowMoment.format("MMMM Do YYYY, hh:mm:ss A");
 //startTime (hh:mm A)
 //endTime (hh:mm A)
-//Add button on task section
 
-var createTaskAction = function(input) {
-    console.log ("input is here");
-    var actionContainerEl = document.createElement('div');
-    actionContainerEl.className = "task-actions;"
-
-
-var addButtonEl = document.createElement("button")
-addButtonEl.textContent.content = "add";
-addButtonEl.className = "btn add-btn";
-addButtonEl.setAttribute("data-task-id", input);
-actionContainerEl.appendChild(addButtonEl);
+ //Add Button on task Section
+ $(document).ready(function(){
+    $(".btn").click(function(){
+      var addTask = document.querySelector("input");
+      console.log("addTask");
+      saveTasks();
+    }) 
+ })
+var saveTasks = function() {
+    localStorage.getItem("input", JSON.stringify(input));
 }
- //make event column editable
- var addButtonHandler = function (event){
-    var targetEl = event.target;
-
-    if(targetEl.matches ("btn")) {
-        console.log ("input", targetEl);
-    }
- }
-
- addButtonEl.addEventListener("click", add);
- 
+ //Make Task editable
 
 //activate Save button
 //store data in local storage
