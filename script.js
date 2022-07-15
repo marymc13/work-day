@@ -1,6 +1,6 @@
-tasks = [];
+                           tasks = [];
 var addButtonEl = document.querySelector("#input");
-let input;
+
 var hours = [9,10,11,12,1,2,3,4,5];
 //Add current date to the top of the page using momentjs
 const date = document.getElementById("date")
@@ -9,24 +9,39 @@ console.log(m.format("MMMM Do YYYY, hh:mm:ss A"));
 const NowMoment = moment(); 
 const eDate = document.getElementById('date');
  eDate.innerHTML = NowMoment.format("MMMM Do YYYY, hh:mm:ss A");
-//startTime (hh:mm A)
-//endTime (hh:mm A)
 
- //Add Button on task Section
+ //activate Save button
  $(document).ready(function(){
-    $(".btn").click(function(){
-      var addTask = document.querySelector("input");
-      console.log("addTask");
-      saveTasks();
-    }) 
- })
-var saveTasks = function() {
-    localStorage.getItem("input", JSON.stringify(input));
-}
- //Make Task editable
+    $(".btn").click(function(e){
+      e.preventDefault()
+     var data = (e.target.getAttribute("data-id"));
+     console.log(data)
+      var input = document.querySelectorAll("input")
+     console.log(input)
+    
+     
+      for (var i = 0; i < input.length; i++){
+        if(data === input[i].getAttribute("id")){
+          localStorage.setItem(data, input[i].value);
+        }
+      }
+     //store data in local storage
+    })
+    localStorage.getItem("input");  
+    });
 
-//activate Save button
-//store data in local storage
 //color code columns based on past, present, future time
+function color(time) {
+  let i = updateTime;
+  let timeBlock = hours;
+ 
+if (timeBlock < i) {
+  return "future";
+} else if (timeBlock > i){
+  return "past";
+}else (timeBlock === i) 
+  return "present";
+}
+ 
 //scroll down feature
 

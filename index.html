@@ -23,9 +23,6 @@
     <h1 id="date">Date</h1>
     
     </head>
-    
-    
-
 
   <body>
     <header class="jumbotron">
@@ -34,15 +31,16 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
+      <div class="time-block">
       <!-- Timeblocks go here -->
       <div class="row" data-hour="9">
         <div class="col">9AM</div>  
         <div class="col-6 textarea">
           <label for="task"></label>
-          <input type="text" id="input">
+          <input type="text" id="9AM">
         </div>  
         <div class="col">
-          <button class="btn" id="save" type="submit">Save</button>
+          <button class="btn" id="save" data-id="9AM" type="submit">Save</button>
         </div>    
       </div>
       
@@ -50,63 +48,90 @@
         <div class="col">10AM</div>  
         <div class="col-6 textarea">
           <label for="task"></label>
-          <input type="text" id="input">
+          <input type="text" id="10AM">
         </div>  
         <div class="col">
-          <button class="btn" id="save" type="submit">Save</button>
+          <button class="btn" id="save"data-id="10AM" type="submit">Save</button>
         </div>    
       </div> 
 
       <div class="row" data-hour="11">
-        <div class="col">11AM</div>  
-        <div class="col-6">
-          <button class="btn" id="input" type="submit">Add Task</button>
+        <div class="col">11AM</div> 
+        <div class="col-6 textarea">
+        <label for="task"></label>
+          <input type="text" id="11AM">
         </div>  
-        <div class="col" id="save">Save</div>   
-      </div>
+        <div class="col">
+          <button class="btn" id="save" data-id="11AM" type="submit">Save</button>
+        </div>    
+      </div> 
 
       <div class="row" data-hour="12">
-        <div class="col">12PM</div>  
-        <div class="col-6">
-          <button class="btn" id="input" type="submit">Add Task</button>
+        <div class="col">12PM</div>
+        <div class="col-6 textarea">  
+        <label for="task"></label>
+          <input type="text" id="12PM">
         </div>  
-        <div class="col" id="save">Save</div>   
-      </div>
+        <div class="col">
+          <button class="btn" id="save" data-id="12PM" type="submit">Save</button>
+        </div>    
+      </div> 
+
       <div class="row" data-hour="1">
-        <div class="col">1PM</div>  
-        <div class="col-6">
-          <button class="btn" id="input" type="submit">Add Task</button>
+        <div class="col">1PM</div> 
+        <div class="col-6 textarea">
+        <label for="task"></label>
+          <input type="text" id="1PM">
         </div>  
-        <div class="col" id="save">Save</div>   
-      </div>
+        <div class="col">
+          <button class="btn" id="save" data-id="1PM" type="submit">Save</button>
+        </div>    
+      </div> 
+
       <div class="row" data-hour="2">
         <div class="col">2PM</div>  
-        <div class="col-6">
-          <button class="btn" id="input" type="submit">Add Task</button>
+        <div class="col-6 textarea">
+        <label for="task"></label>
+          <input type="text" id="2PM">
         </div>  
-        <div class="col" id="save">Save</div>   
-      </div>
+        <div class="col">
+          <button class="btn" id="save" data-id="2PM" type="submit">Save</button>
+        </div>    
+      </div> 
+
       <div class="row" data-hour="3">
-        <div class="col">3PM</div>  
-        <div class="col-6">
-          <button class="btn" id="input" type="submit">Add Task</button>
+        <div class="col">3PM</div> 
+        <div class="col-6 textarea"> 
+        <label for="task"></label>
+          <input type="text" id="3PM">
         </div>  
-        <div class="col" id="save">Save</div>   
-      </div>
+        <div class="col">
+          <button class="btn" id="save" data-id="3PM" type="submit">Save</button>
+        </div>    
+      </div> 
+
       <div class="row" data-hour="4">
-        <div class="col">4PM</div>  
-        <div class="col-6">
-          <button class="btn" id="input" type="submit">Add Task</button>
+        <div class="col">4PM</div> 
+        <div class="col-6 textarea"> 
+        <label for="task"></label>
+          <input type="text" id="4PM">
         </div>  
-        <div class="col" id="save">Save</div>   
-      </div>
+        <div class="col">
+          <button class="btn" id="save" data-id="4PM" type="submit">Save</button>
+        </div>    
+      </div> 
+
       <div class="row" data-hour="5">
-        <div class="col">5PM</div>  
-        <div class="col-6">
-          <button class="btn" id="input" type="submit">Add Task</button>
+        <div class="col">5PM</div>
+        <div class="col-6 textarea">
+        <label for="task"></label>
+          <input type="text" id="5PM">
         </div>  
-        <div class="col" id="save">Save</div>   
-      </div>
+        <div class="col">
+          <button class="btn" id="save" data-id="5PM" type="submit">Save</button>
+        </div> 
+        </div>   
+      </div> 
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
