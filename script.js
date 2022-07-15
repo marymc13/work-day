@@ -27,7 +27,11 @@ const eDate = document.getElementById('date');
       }
      //store data in local storage
     })
-    localStorage.getItem("input");  
+    for (vari = 0; i < input.length; i++) {
+      if (data ===input[i].getAttribute("id")) {
+        localStorage.getItem("input");
+      }
+    }
     });
 
 //color code columns based on past, present, future time
